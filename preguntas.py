@@ -168,7 +168,7 @@ def pregunta_09():
     """
     years = tbl0["_c3"].tolist()
     years = [x[0:4] for x in years]
-    tbl0["years"] = years
+    tbl0["year"] = years
     return tbl0
 
 
@@ -254,6 +254,7 @@ def pregunta_13():
     Name: _c5b, dtype: int64
     """
     new_tbl = pd.merge(tbl0,tbl2)
+
     new_tbl = new_tbl.groupby("_c1")["_c5b"].sum()
     return new_tbl
 
